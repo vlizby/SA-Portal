@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100">
+
+
+
+    <!-- Navbar -->
+    <nav class="bg-red-500 shadow-md">
+        <div class="container mx-auto px-8 py-6 flex justify-center items-center">
+            <!-- Logo -->
+            <div class="text-2xl tracking-wide font-semibold">
+                <a href="#" class="text-gray-800 font-serif">Student Management System</a>
+            </div>
+
+           
+            <!-- Hamburger Icon -->
+            <div class="lg:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navbar Links -->
+            <div id="menu" class="hidden lg:flex lg:items-center lg:space-x-4">
+                
+                <a id="uploadLink" href="./pages/admin-pannel/admin.html"
+                    class="text-gray-600 hidden hover:text-gray-800">Admin Portal</a>
+                <a id="studentPortalLink" href="/pages/student-pannel/student.html"
+                    class="text-gray-600 hidden hover:text-gray-800">Student Portal</a>
+                <a id="loginLink" href="./pages/auth/login/login.html"
+                    class="text-gray-600 hover:text-gray-800">Login</a>
+                <button onclick="logout()" id="logoutBtn"
+                    class="text-white bg-blue-500 p-2 rounded hidden">Logout</button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white shadow-md mt-2 grid justify-items-center">
+            <a href="#" class="block text-gray-600 hover:text-gray-800 px-4 py-2">Home</a>
+            <a id="uploadLinkMobile" href="./pages/admin-pannel/admin.html"
+                class="block text-gray-600 hover:text-gray-800 px-4 py-2 hidden">Admin Portal</a>
+            <a id="studentPortalLinkMobile" href="/pages/student-pannel/student.html"
+                class="block text-gray-600 hover:text-gray-800 px-4 py-2 hidden">Student Portal</a>
+            <a id="loginLinkMobile" href="./pages/auth/login/login.html"
+                class="block text-gray-600 hover:text-gray-800 px-4 py-2">Login</a>
+            <button onclick="logout()" id="logoutBtnMobile"
+                class="block text-white bg-blue-500 p-2 rounded mx-4 my-2 hidden">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-cover bg-center h-screen"
+        style="background-image: url('./ada.jpg');">
+        <div class="flex items-center justify-center h-full bg-gray-800 bg-opacity-50">
+            <div class="text-center text-white">
+                <h1 class="text-6xl font-extrabold mb-4 text-red-500 font-serif">Welcome to the Student Management System</h1>
+                <p class="text-lg mb-8 text-red-500">Effortlessly manage student profiles, monitor academic progress, and streamline educational tasks for optimal efficiency.</p>
+                <a href="./pages/auth/login/login.html" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block">Hop In</a>
+                <a href="../pages/admin-pannel/admin.html" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block">Admin Panel</a>
+                <a href="../pages/student-pannel/student.html" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block">Student Panel</a>
+
+            </div>
+        </div>
+    </header>
+
+
+    
+
+    
+
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
